@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/ml5@0.6.1/dist/ml5.min.js"></script>
+    <title>Twilio Video <Mask>
+    <No-Mask></No-Mask> Demo</title>
+</head>
+  <body>
+    <h2>
+        Are you wearing a mask?: <span id="result">N/A</span> (<span id="confidence">N/A</span>)
+      </h2>
+    <div id="room-controls">
+      <video id="video" autoplay muted="true" width="320"
+          height="240"></video>
+      <button id="button-join">Join Room</button>
+      <button id="button-leave" disabled>Leave Room</button>
+    </div>
+      <p>
+          <em>This model has already been fed and trained with images categorized into mask or no mask.</em>
+        </p>
+        <p>
+        <!-- <button id="noMaskButton">Add >= 20 no-mask images</button>- No-mask: <span id="numNoMaskImages">0</span> images
+      </p>
+      <p>
+        <button id="maskButton">Add >= 20 mask images</button> - Mask: <span id="numMaskImages">0</span> images
+      </p> -->
+      <!-- <p>
+        <button id="train">Train!</button> <span id="loss"></span>
+      </p> -->
+      <p>
+        <button id="predict">Detect!</button>
+        <!-- <button id = "save">Save model</button> -->
+      </p>
+
+  <script src="//media.twiliocdn.com/sdk/js/video/releases/2.3.0/twilio-video.min.js"></script>
+  <script src="https://unpkg.com/axios@0.19.0/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+  </body>
+</html>
