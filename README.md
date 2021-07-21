@@ -1,8 +1,8 @@
 ![gif of mask detection](twiliovideomask.gif)
 <ol>
-<li>Make a Twilio video application (ie [this one in 9 minutes](https://www.twilio.com/blog/build-a-video-app-javascript-twilio-cli-quickly))</li>
+<li>Make a Twilio video application ie <a href = "https://www.twilio.com/blog/build-a-video-app-javascript-twilio-cli-quickly" target="_blank">this one in 9 minutes</a></li>
 
-<li>All the [ml5](https://twitter.com/ml5js) code is in `assets/index.js`. ml5.js is a handy ML library in the browser built on top of TensorFlow.js which does most of the heavy-lifting and low-level tasks with regard to ML. The `Assets` folder also has the model I trained to recognize myself wearing a mask or not. </li>
+<li>All the <a href = "https://ml5js.org/" target="_blank">ml5.js</a>code is in <em>assets/index.js</em>. ml5.js is a handy ML library in the browser built on top of TensorFlow.js which does most of the heavy-lifting and low-level tasks with regard to ML. The <em>Assets</em> folder also has the model I trained to recognize myself wearing a mask or not. </li>
 </ol>
 
 In ML, there are two popular tasks: classification and regression. This project explores the classification problem: given an input of an image, the machine classifies the class/category of an image.
