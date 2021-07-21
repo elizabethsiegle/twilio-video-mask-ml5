@@ -1,4 +1,5 @@
 1. Make a Twilio video application (ie [this one in 9 minutes](https://www.twilio.com/blog/build-a-video-app-javascript-twilio-cli-quickly))
+
 2.All the [ml5](https://twitter.com/ml5js) code is in 'assets/index.js'. ml5.js is the ML  library in the browser. It is built on top of tensorflow.js which does all the heavy-lifting or low-level tasks with regard to ML. 'Assets' also has the model I trained to recognize myself wearing a mask or not. 
 
 In ML, there are two popular tasks: classification and regression. This project explores the classification problem: given an input of an image, the machine classifies the class/category of an image.
