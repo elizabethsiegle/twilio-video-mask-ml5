@@ -1,4 +1,4 @@
-![gif of mask detection](twiliovideomask.gif)
+![gif of mask detection](./twiliovideomask.gif)
 <ol>
 <li>Make a Twilio video application (ie [this one in 9 minutes](https://www.twilio.com/blog/build-a-video-app-javascript-twilio-cli-quickly))</li>
 
