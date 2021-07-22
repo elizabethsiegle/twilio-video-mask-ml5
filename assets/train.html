@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://unpkg.com/ml5@0.6.1/dist/ml5.min.js"></script>
     <title>Twilio Video Mask ||
-    No-Mask Demo</title>
+    No-Mask Training</title>
 </head>
   <body>
     <h2>
-        Are you wearing a mask: <span id="result">N/A</span> (<span id="confidence">N/A</span>)
+        Train model to detect mask-wearing: Are you wearing a mask?: <span id="result">N/A</span> (<span id="confidence">N/A</span>)
       </h2>
     <div id="room-controls">
       <video  id="video" autoplay muted="true" width="320"
@@ -30,11 +30,13 @@
       </p>
       <p>
         <button id="predict">See the model in action once training is done</button>
+    </p>
+    <p>
         <button id = "save">Save model to Assets folder</button>
-      </p>
-      <p>
+    </p>
+    <p>
         <a href="video.html"><button id="goToVideo">Go to video call to use the mask detection in</button></a>
-      </p>
+    </p>
 
   <script src="//media.twiliocdn.com/sdk/js/video/releases/2.3.0/twilio-video.min.js"></script>
   <script src="https://unpkg.com/axios@0.19.0/dist/axios.min.js"></script>
