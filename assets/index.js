@@ -16,7 +16,6 @@
     const resSpan = document.getElementById('result');
     const conf = document.getElementById('confidence');
     const predictButton = document.getElementById('predict');
-    // const saveModelButton = document.getElementById('save');
     let classifier = null;
     let featureExtractor = ml5.featureExtractor('MobileNet'); 
     let totalLoss;
@@ -32,7 +31,7 @@
     var site = `https://${TWILIO_DOMAIN}/video-token`;
     console.log(`site ${site}`);
     joinRoomButton.onclick = () => {
-        featureExtractor.load('model.json');
+        featureExtractor.load('model2.json'); //or model.json, depending what you name it as
         // get access token
         axios.get(`https://${TWILIO_DOMAIN}/video-token`).then(async (body) => {
             const token = body.data.token;
@@ -52,32 +51,6 @@
                 joinRoomButton.disabled = true;
                 leaveRoomButton.disabled = false;
                 classifier = featureExtractor.classification(video);
-                //buttons for when you need to build the model
-                //no mask
-                // noMaskButton.onclick = () => { 
-                //     classifier.addImage('no');
-                //     amountOfLabel1Images.innerText = Number(amountOfLabel1Images.innerText) + 1;
-                // };
-                // maskButton.onclick = () => { //mask
-                //     classifier.addImage('yes');
-                //     amountOfLabel2Images.innerText = Number(amountOfLabel2Images.innerText) + 1;
-                // };
-                // incorrectMaskButton.onclick = () => { //incorrect mask
-                //     classifier.addImage('incorrect');
-                //     amountOfLabel3Images.innerText = Number(amountOfLabel3Images.innerText) + 1;
-                // };
-                // train.onclick = () => {
-                //     classifier.train((lossValue) => {
-                //         if (lossValue) {
-                //             totalLoss = lossValue;
-                //             loss.innerHTML = `Loss: ${totalLoss}`;
-                //         } 
-                //         else {
-                //             loss.innerHTML = `Done Training! Final Loss: ${totalLoss}`;
-                //         }
-                //     });
-                //     //console.log(classifier);
-                // };
                 const resultsFunc = (err, res) => {
                     if (err) {
                         console.error(err);
@@ -86,15 +59,11 @@
                         resSpan.innerText = res[0].label;
                         conf.innerText = res[0].confidence;
                         classifier.classify(resultsFunc); // recall the classify function again
-                        //console.dir(classifier);
                     }
                 }
                 predictButton.onclick = () => {
                     classifier.classify(resultsFunc);
                 };
-                // saveModelButton.onclick = () => {
-                //     featureExtractor.save();
-                // }
             });
         });
     };
