@@ -5,20 +5,11 @@
     const Video = Twilio.Video;
     let videoRoom, localStream;
     const video = document.getElementById("video");
-    // const noMaskButton = document.getElementById('noMaskButton');
-    // const maskButton = document.getElementById('maskButton');
-    // const incorrectMaskButton = document.getElementById('incorrectMaskButton');
-    // const amountOfLabel1Images = document.getElementById('numNoMaskImages');
-    // const amountOfLabel2Images = document.getElementById('numMaskImages');
-    // const amountOfLabel3Images = document.getElementById('numIncorrectMaskImages');
-    const train = document.getElementById('train');
-    const loss = document.getElementById('loss');
     const resSpan = document.getElementById('result');
     const conf = document.getElementById('confidence');
     const predictButton = document.getElementById('predict');
     let classifier = null;
     let featureExtractor = ml5.featureExtractor('MobileNet'); 
-    let totalLoss;
     // preview screen
     navigator.mediaDevices.getUserMedia({video: true, audio: true})
     .then(vid => {
